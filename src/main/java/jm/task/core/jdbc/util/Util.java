@@ -11,15 +11,17 @@ public class Util {
     private static final String PASSWORD = "1111";
 
 
-    public Util(){
+    public Util() {
     }
 
-    public static Connection getConnection() throws SQLException {
+    public static Connection getConnection() {
+        Connection connection = null;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-        } catch (ClassNotFoundException e) {
+            connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-        return DriverManager.getConnection(URL,USERNAME,PASSWORD);
+        return connection;
     }
 }
