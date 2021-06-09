@@ -28,7 +28,11 @@ public class Util {
 
                 Properties settings = new Properties();
                 settings.put(Environment.DRIVER, "com.mysql.cj.jdbc.Driver");
-                settings.put(Environment.URL, "jdbc:mysql://localhost:3306/mydb?useSSL=false");
+                settings.put(Environment.URL, "jdbc:mysql://localhost:3306/mydb?autoReconnect=true" +
+                        "&useSSL=FALSE" +
+                        "&useLegacyDatetimeCode=false" +
+                        "&serverTimezone=UTC" +
+                        "&allowPublicKeyRetrieval=true");
                 settings.put(Environment.USER, "Pavel");
                 settings.put(Environment.PASS, "1111");
                 settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQLDialect");
