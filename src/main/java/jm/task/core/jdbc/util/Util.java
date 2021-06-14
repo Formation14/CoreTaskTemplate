@@ -17,7 +17,6 @@ public class Util {
     public synchronized static Util getInstance() {
         if (instance == null) {
             instance = new Util();
-            instance.getSessionFactory();
         }
         return instance;
     }
