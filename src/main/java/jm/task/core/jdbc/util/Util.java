@@ -32,7 +32,7 @@ public class Util {
                         "&useLegacyDatetimeCode=false" +
                         "&serverTimezone=UTC" +
                         "&allowPublicKeyRetrieval=true");
-                settings.put(Environment.USER, "Pavel");
+                settings.put(Environment.USER, "root");
                 settings.put(Environment.PASS, "1111");
                 settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQLDialect");
                 settings.put(Environment.SHOW_SQL, "true");
