@@ -1,9 +1,5 @@
 package jm.task.core.jdbc.util;
-
-
-
 import java.util.Properties;
-
 import jm.task.core.jdbc.model.User;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -20,6 +16,8 @@ public class Util {
         }
         return instance;
     }
+    private Util(){
+    }
     public SessionFactory getSessionFactory() {
         if (sessionFactory == null) {
             try {
@@ -33,7 +31,7 @@ public class Util {
                         "&serverTimezone=UTC" +
                         "&allowPublicKeyRetrieval=true");
                 settings.put(Environment.USER, "root");
-                settings.put(Environment.PASS, "1111");
+                settings.put(Environment.PASS, "root");
                 settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQLDialect");
                 settings.put(Environment.SHOW_SQL, "true");
 
