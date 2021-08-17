@@ -1,0 +1,154 @@
+Index: src/main/java/jm/task/core/jdbc/service/UserServiceImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package jm.task.core.jdbc.service;\r\n\r\nimport jm.task.core.jdbc.dao.UserDaoHibernateImpl;\r\nimport jm.task.core.jdbc.dao.UserDaoJDBCImpl;\r\nimport jm.task.core.jdbc.model.User;\r\n\r\nimport java.util.List;\r\n\r\npublic class UserServiceImpl extends UserDaoJDBCImpl implements UserService {\r\n    public void createUsersTable() {\r\n        super.createUsersTable();\r\n    }\r\n\r\n    public void dropUsersTable() {\r\n        super.dropUsersTable();\r\n    }\r\n\r\n    public void saveUser(String name, String lastName, byte age) {\r\n        super.saveUser(name,lastName,age);\r\n    }\r\n\r\n    public void removeUserById(long id) {\r\n        super.removeUserById(id);\r\n    }\r\n\r\n    public List<User> getAllUsers() {\r\n        return super.getAllUsers();\r\n    }\r\n\r\n    public void cleanUsersTable() {\r\n        super.cleanUsersTable();\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/jm/task/core/jdbc/service/UserServiceImpl.java b/src/main/java/jm/task/core/jdbc/service/UserServiceImpl.java
+--- a/src/main/java/jm/task/core/jdbc/service/UserServiceImpl.java	(revision b9587eb0d154f405f97bf8d17aabc63077709b80)
++++ b/src/main/java/jm/task/core/jdbc/service/UserServiceImpl.java	(date 1629183427468)
+@@ -1,6 +1,5 @@
+ package jm.task.core.jdbc.service;
+ 
+-import jm.task.core.jdbc.dao.UserDaoHibernateImpl;
+ import jm.task.core.jdbc.dao.UserDaoJDBCImpl;
+ import jm.task.core.jdbc.model.User;
+ 
+Index: .idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_2_Final.xml
+===================================================================
+diff --git a/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_2_Final.xml b/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_2_Final.xml
+deleted file mode 100644
+--- a/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_2_Final.xml	(revision b9587eb0d154f405f97bf8d17aabc63077709b80)
++++ /dev/null	(revision b9587eb0d154f405f97bf8d17aabc63077709b80)
+@@ -1,13 +0,0 @@
+-<component name="libraryTable">
+-  <library name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.2.Final">
+-    <CLASSES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.2.Final/hibernate-jpa-2.1-api-1.0.2.Final.jar!/" />
+-    </CLASSES>
+-    <JAVADOC>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.2.Final/hibernate-jpa-2.1-api-1.0.2.Final-javadoc.jar!/" />
+-    </JAVADOC>
+-    <SOURCES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.2.Final/hibernate-jpa-2.1-api-1.0.2.Final-sources.jar!/" />
+-    </SOURCES>
+-  </library>
+-</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml
+===================================================================
+diff --git a/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml b/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml
+deleted file mode 100644
+--- a/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml	(revision b9587eb0d154f405f97bf8d17aabc63077709b80)
++++ /dev/null	(revision b9587eb0d154f405f97bf8d17aabc63077709b80)
+@@ -1,13 +0,0 @@
+-<component name="libraryTable">
+-  <library name="Maven: com.google.protobuf:protobuf-java:3.11.4">
+-    <CLASSES>
+-      <root url="jar://$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/3.11.4/protobuf-java-3.11.4.jar!/" />
+-    </CLASSES>
+-    <JAVADOC>
+-      <root url="jar://$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/3.11.4/protobuf-java-3.11.4-javadoc.jar!/" />
+-    </JAVADOC>
+-    <SOURCES>
+-      <root url="jar://$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/3.11.4/protobuf-java-3.11.4-sources.jar!/" />
+-    </SOURCES>
+-  </library>
+-</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml
+===================================================================
+diff --git a/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml b/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml
+deleted file mode 100644
+--- a/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml	(revision b9587eb0d154f405f97bf8d17aabc63077709b80)
++++ /dev/null	(revision b9587eb0d154f405f97bf8d17aabc63077709b80)
+@@ -1,13 +0,0 @@
+-<component name="libraryTable">
+-  <library name="Maven: org.hamcrest:hamcrest-core:1.3">
+-    <CLASSES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar!/" />
+-    </CLASSES>
+-    <JAVADOC>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3-javadoc.jar!/" />
+-    </JAVADOC>
+-    <SOURCES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3-sources.jar!/" />
+-    </SOURCES>
+-  </library>
+-</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__antlr_antlr_2_7_7.xml
+===================================================================
+diff --git a/.idea/libraries/Maven__antlr_antlr_2_7_7.xml b/.idea/libraries/Maven__antlr_antlr_2_7_7.xml
+deleted file mode 100644
+--- a/.idea/libraries/Maven__antlr_antlr_2_7_7.xml	(revision b9587eb0d154f405f97bf8d17aabc63077709b80)
++++ /dev/null	(revision b9587eb0d154f405f97bf8d17aabc63077709b80)
+@@ -1,13 +0,0 @@
+-<component name="libraryTable">
+-  <library name="Maven: antlr:antlr:2.7.7">
+-    <CLASSES>
+-      <root url="jar://$MAVEN_REPOSITORY$/antlr/antlr/2.7.7/antlr-2.7.7.jar!/" />
+-    </CLASSES>
+-    <JAVADOC>
+-      <root url="jar://$MAVEN_REPOSITORY$/antlr/antlr/2.7.7/antlr-2.7.7-javadoc.jar!/" />
+-    </JAVADOC>
+-    <SOURCES>
+-      <root url="jar://$MAVEN_REPOSITORY$/antlr/antlr/2.7.7/antlr-2.7.7-sources.jar!/" />
+-    </SOURCES>
+-  </library>
+-</component>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"a4eaf57a-dc8b-4a44-b88b-6024af1daaf3\" name=\"Default Changelist\" comment=\"ver2\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"Hibernate\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1uqJQGzivRCIJDBCyhl8LeGFFqf\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"ASKED_SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"DatabaseDriversLRU\" value=\"mysql\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"aspect.path.notification.shown\" value=\"true\" />\r\n    <property name=\"project.structure.last.edited\" value=\"Project\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.15\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.2\" />\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"JUnit.UserServiceTest\">\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"jm.task.core.jdbc.Main\" />\r\n      <module name=\"CoreTaskTemplate\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"jm.task.core.jdbc.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"ArquillianJUnit\" factoryName=\"\" nameIsGenerated=\"true\">\r\n      <option name=\"arquillianRunConfiguration\">\r\n        <value>\r\n          <option name=\"containerStateName\" value=\"\" />\r\n        </value>\r\n      </option>\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"UserServiceTest\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"TaskJDBC\" />\r\n      <option name=\"PACKAGE_NAME\" value=\"\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"UserServiceTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"\" />\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"TaskJDBC [clean]\" type=\"MavenRunConfiguration\" factoryName=\"Maven\" temporary=\"true\">\r\n      <MavenSettings>\r\n        <option name=\"myGeneralSettings\" />\r\n        <option name=\"myRunnerSettings\" />\r\n        <option name=\"myRunnerParameters\">\r\n          <MavenRunnerParameters>\r\n            <option name=\"profiles\">\r\n              <set />\r\n            </option>\r\n            <option name=\"goals\">\r\n              <list>\r\n                <option value=\"clean\" />\r\n              </list>\r\n            </option>\r\n            <option name=\"pomFileName\" value=\"pom.xml\" />\r\n            <option name=\"profilesMap\">\r\n              <map />\r\n            </option>\r\n            <option name=\"resolveToWorkspace\" value=\"false\" />\r\n            <option name=\"workingDirPath\" value=\"$PROJECT_DIR$\" />\r\n          </MavenRunnerParameters>\r\n        </option>\r\n      </MavenSettings>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"TaskJDBC [compile]\" type=\"MavenRunConfiguration\" factoryName=\"Maven\" temporary=\"true\">\r\n      <MavenSettings>\r\n        <option name=\"myGeneralSettings\" />\r\n        <option name=\"myRunnerSettings\" />\r\n        <option name=\"myRunnerParameters\">\r\n          <MavenRunnerParameters>\r\n            <option name=\"profiles\">\r\n              <set />\r\n            </option>\r\n            <option name=\"goals\">\r\n              <list>\r\n                <option value=\"compile\" />\r\n              </list>\r\n            </option>\r\n            <option name=\"pomFileName\" value=\"pom.xml\" />\r\n            <option name=\"profilesMap\">\r\n              <map />\r\n            </option>\r\n            <option name=\"resolveToWorkspace\" value=\"false\" />\r\n            <option name=\"workingDirPath\" value=\"$PROJECT_DIR$\" />\r\n          </MavenRunnerParameters>\r\n        </option>\r\n      </MavenSettings>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"Application.Main\" />\r\n      <item itemvalue=\"JUnit.UserServiceTest\" />\r\n      <item itemvalue=\"Maven.TaskJDBC [clean]\" />\r\n      <item itemvalue=\"Maven.TaskJDBC [compile]\" />\r\n    </list>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"JUnit.UserServiceTest\" />\r\n        <item itemvalue=\"Maven.TaskJDBC [clean]\" />\r\n        <item itemvalue=\"Maven.TaskJDBC [compile]\" />\r\n        <item itemvalue=\"Application.Main\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"a4eaf57a-dc8b-4a44-b88b-6024af1daaf3\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1625387167864</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1625387167864</updated>\r\n      <workItem from=\"1625387170048\" duration=\"1231000\" />\r\n      <workItem from=\"1629182901110\" duration=\"46000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"ver2\">\r\n      <created>1629118463379</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1629118463379</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"ver2\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"ver2\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision b9587eb0d154f405f97bf8d17aabc63077709b80)
++++ b/.idea/workspace.xml	(date 1629183427893)
+@@ -4,7 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="a4eaf57a-dc8b-4a44-b88b-6024af1daaf3" name="Default Changelist" comment="ver2" />
++    <list default="true" id="dcddef3c-3ee4-4cdf-8b54-77dda9d04eb4" name="Default Changelist" comment="ver2">
++      <change beforePath="$PROJECT_DIR$/src/main/java/jm/task/core/jdbc/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jm/task/core/jdbc/service/UserServiceImpl.java" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+Index: .idea/dataSources.local.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"dataSourceStorageLocal\" created-in=\"IU-211.7628.21\">\r\n    <data-source name=\"@localhost\" uuid=\"c9cf76ae-2133-4c08-8c0e-007926699e5a\">\r\n      <database-info product=\"MySQL\" version=\"8.0.25\" jdbc-version=\"4.2\" driver-name=\"MySQL Connector/J\" driver-version=\"mysql-connector-java-8.0.25 (Revision: 08be9e9b4cba6aa115f9b27b215887af40b159e0)\" dbms=\"MYSQL\" exact-version=\"8.0.25\" exact-driver-version=\"8.0\">\r\n        <extra-name-characters>#@</extra-name-characters>\r\n        <identifier-quote-string>`</identifier-quote-string>\r\n      </database-info>\r\n      <case-sensitivity plain-identifiers=\"lower\" quoted-identifiers=\"lower\" />\r\n      <secret-storage>master_key</secret-storage>\r\n      <user-name>root</user-name>\r\n      <schema-mapping>\r\n        <introspection-scope>\r\n          <node kind=\"schema\" qname=\"@\" />\r\n        </introspection-scope>\r\n      </schema-mapping>\r\n    </data-source>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/dataSources.local.xml b/.idea/dataSources.local.xml
+--- a/.idea/dataSources.local.xml	(revision b9587eb0d154f405f97bf8d17aabc63077709b80)
++++ b/.idea/dataSources.local.xml	(date 1629183427908)
+@@ -2,18 +2,8 @@
+ <project version="4">
+   <component name="dataSourceStorageLocal" created-in="IU-211.7628.21">
+     <data-source name="@localhost" uuid="c9cf76ae-2133-4c08-8c0e-007926699e5a">
+-      <database-info product="MySQL" version="8.0.25" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.25 (Revision: 08be9e9b4cba6aa115f9b27b215887af40b159e0)" dbms="MYSQL" exact-version="8.0.25" exact-driver-version="8.0">
+-        <extra-name-characters>#@</extra-name-characters>
+-        <identifier-quote-string>`</identifier-quote-string>
+-      </database-info>
+-      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+-      <secret-storage>master_key</secret-storage>
+-      <user-name>root</user-name>
+-      <schema-mapping>
+-        <introspection-scope>
+-          <node kind="schema" qname="@" />
+-        </introspection-scope>
+-      </schema-mapping>
++      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
++      <schema-mapping />
+     </data-source>
+   </component>
+ </project>
+\ No newline at end of file

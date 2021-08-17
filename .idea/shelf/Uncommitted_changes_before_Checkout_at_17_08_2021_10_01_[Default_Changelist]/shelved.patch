@@ -1,0 +1,41 @@
+Index: src/main/java/jm/task/core/jdbc/dao/UserDaoHibernateImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package jm.task.core.jdbc.dao;\r\n\r\n\r\nimport jm.task.core.jdbc.model.User;\r\nimport jm.task.core.jdbc.util.Util;\r\nimport org.hibernate.*;\r\n\r\nimport java.util.List;\r\n\r\npublic class UserDaoHibernateImpl implements UserDao {\r\n\r\n    private SessionFactory sessionFactory = Util.getInstance().getSessionFactory();\r\n\r\n    public UserDaoHibernateImpl() {\r\n\r\n    }\r\n\r\n    @Override\r\n    public void createUsersTable() {\r\n        Transaction t = null;\r\n        Session session = null;\r\n        try {\r\n            session = sessionFactory.openSession();\r\n            t = session.beginTransaction();\r\n            String sql = \"CREATE TABLE IF NOT EXISTS users (id INT(5) NOT NULL AUTO_INCREMENT,\" +\r\n                    \" name VARCHAR(50),\" +\r\n                    \" lastName VARCHAR(50),\" +\r\n                    \" age INT(3),\" +\r\n                    \" PRIMARY KEY (id))\";\r\n            session.createSQLQuery(sql).executeUpdate();\r\n        } catch (HibernateException e) {\r\n            if (t != null) t.rollback();\r\n            e.printStackTrace();\r\n        } finally {\r\n            try {\r\n                if (session != null) session.close();\r\n            } catch (HibernateException ignored) {\r\n\r\n            }\r\n        }\r\n    }\r\n\r\n    @Override\r\n    public void dropUsersTable() {\r\n        Transaction t = null;\r\n        Session session = null;\r\n        try {\r\n            session = sessionFactory.openSession();\r\n            t = session.beginTransaction();\r\n            String sql = \"DROP TABLE IF EXISTS users\";\r\n            session.createSQLQuery(sql).executeUpdate();\r\n        } catch (HibernateException e) {\r\n            if (t != null) t.rollback();\r\n            e.printStackTrace();\r\n        } finally {\r\n            try {\r\n                if (session != null) session.close();\r\n            } catch (HibernateException ignored) {\r\n\r\n            }\r\n        }\r\n    }\r\n\r\n    @Override\r\n    public void saveUser(String name, String lastName, byte age) {\r\n        Transaction t = null;\r\n        Session session = null;\r\n        try {\r\n            session = sessionFactory.openSession();\r\n            t = session.beginTransaction();\r\n            User user = new User();\r\n            user.setName(name);\r\n            user.setLastName(lastName);\r\n            user.setAge(age);\r\n            session.save(user);\r\n            t.commit();\r\n        } catch (HibernateException e) {\r\n            if (t != null) t.rollback();\r\n            e.printStackTrace();\r\n        } finally {\r\n            try {\r\n                if (session != null) session.close();\r\n            } catch (HibernateException ignored) {\r\n\r\n            }\r\n        }\r\n    }\r\n\r\n    @Override\r\n    public void removeUserById(long id) {\r\n        Transaction t = null;\r\n        Session session = null;\r\n        try {\r\n            session = sessionFactory.openSession();\r\n            t = session.beginTransaction();\r\n            User user = (User) session.load(User.class, id);\r\n            session.delete(user);\r\n            t.commit();\r\n        } catch (HibernateException e) {\r\n            if (t != null) t.rollback();\r\n            e.printStackTrace();\r\n        } finally {\r\n            try {\r\n                if (session != null) session.close();\r\n            } catch (HibernateException ignored) {\r\n\r\n            }\r\n        }\r\n    }\r\n\r\n    @Override\r\n    public List<User> getAllUsers() {\r\n        Transaction t = null;\r\n        Session session = null;\r\n        List<User> result = null;\r\n        try {\r\n            session = sessionFactory.openSession();\r\n            t = session.beginTransaction();\r\n            result = session.createQuery(\"from User\").list();\r\n            t.commit();\r\n        } catch (HibernateException e) {\r\n            if (t != null) t.rollback();\r\n            e.printStackTrace();\r\n        } finally {\r\n            try {\r\n                if (session != null) session.close();\r\n            } catch (HibernateException ignored) {\r\n\r\n            }\r\n        }\r\n        return result;\r\n    }\r\n\r\n    @Override\r\n    public void cleanUsersTable() {\r\n        Transaction t = null;\r\n        Session session = null;\r\n        try {\r\n            session = sessionFactory.openSession();\r\n            t = session.beginTransaction();\r\n\r\n            String sql = \"TRUNCATE TABLE users\";\r\n            session.createSQLQuery(sql).executeUpdate();\r\n        } catch (HibernateException e) {\r\n            if (t != null) t.rollback();\r\n            e.printStackTrace();\r\n        } finally {\r\n            try {\r\n                if (session != null) session.close();\r\n            } catch (HibernateException ignored) {\r\n\r\n            }\r\n        }\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/jm/task/core/jdbc/dao/UserDaoHibernateImpl.java b/src/main/java/jm/task/core/jdbc/dao/UserDaoHibernateImpl.java
+--- a/src/main/java/jm/task/core/jdbc/dao/UserDaoHibernateImpl.java	
++++ b/src/main/java/jm/task/core/jdbc/dao/UserDaoHibernateImpl.java	
+@@ -9,7 +9,7 @@
+ 
+ public class UserDaoHibernateImpl implements UserDao {
+ 
+-    private SessionFactory sessionFactory = Util.getInstance().getSessionFactory();
++    private final SessionFactory sessionFactory = Util.getInstance(). getSessionFactory();
+ 
+     public UserDaoHibernateImpl() {
+ 
+Index: src/main/java/jm/task/core/jdbc/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package jm.task.core.jdbc;\r\nimport jm.task.core.jdbc.model.User;\r\nimport jm.task.core.jdbc.service.UserService;\r\nimport jm.task.core.jdbc.service.UserServiceImpl;\r\n\r\npublic class Main {\r\n\r\n\r\n    public static void main(String[] args) {\r\n\r\n        UserService userService = new UserServiceImpl();\r\n        userService.createUsersTable();\r\n        userService.saveUser(\"Pavel\",\"Telezhevich\", (byte) 25);\r\n        userService.saveUser(\"Andrey\",\"Iaroschuk\", (byte) 45);\r\n        userService.saveUser(\"Sasha\",\"Eglit\", (byte) 32);\r\n        userService.saveUser(\"Sergey\",\"Korolev\", (byte) 19);\r\n        userService.getAllUsers().forEach(System.out::println);\r\n        userService.cleanUsersTable();\r\n        userService.dropUsersTable();\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/jm/task/core/jdbc/Main.java b/src/main/java/jm/task/core/jdbc/Main.java
+--- a/src/main/java/jm/task/core/jdbc/Main.java	
++++ b/src/main/java/jm/task/core/jdbc/Main.java	
+@@ -14,8 +14,8 @@
+         userService.saveUser("Andrey","Iaroschuk", (byte) 45);
+         userService.saveUser("Sasha","Eglit", (byte) 32);
+         userService.saveUser("Sergey","Korolev", (byte) 19);
+-        userService.getAllUsers().forEach(System.out::println);
+-        userService.cleanUsersTable();
+-        userService.dropUsersTable();
++//        userService.getAllUsers().forEach(System.out::println);
++//        userService.cleanUsersTable();
++//        userService.dropUsersTable();
+     }
+ }
